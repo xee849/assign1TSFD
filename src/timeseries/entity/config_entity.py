@@ -13,3 +13,11 @@ class PrepareDataConfig:
     train_size : float
     coll_name : str
     look_Back : int
+
+@dataclass(frozen=True)
+class PrepareModel:
+    model_direct : Path
+    loss_type : str
+    Batch_size: int
+    epochs: int
+    look_back : int

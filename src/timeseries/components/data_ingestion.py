@@ -15,7 +15,7 @@ class DataIngestion:
             dataset_url=self.config.source_URL
             download_dir=self.config.local_data_file
             os.makedirs("artifacts/data_ingestion",exist_ok =True)
-            logger.info(f"download datarom {dataset_url} into file {download_dir}")
+            #logger.info(f"download datarom {dataset_url} into file {download_dir}")
             file_id=dataset_url
             file_name=file_id.rsplit('/')[-1]
             ur.urlretrieve(file_id,os.path.join(download_dir,file_name))

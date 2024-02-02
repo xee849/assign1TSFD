@@ -6,10 +6,10 @@ data_ingestion:
   source_URL: https://github.com/waasnipun/timeseries-mobile_traffic-forecast-LSTM/raw/main/dataset/Data_V3.xlsx
   local_data_file: artifacts/data_ingestion
 
-prepare_base_model:
-  root_dir: artifacts/prepare_base_model
-  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5
-
 prepare_data:
   data_path: artifacts/data_ingestion/Data_V3.xlsx
   col_name: Ish.L.TrafficVolume.DL.GB(GB)
+
+prepare_model:
+  model_directory: artifacts/prepare_model
+  error_type: mean_squared_error

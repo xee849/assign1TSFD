@@ -1,4 +1,4 @@
-from timeseries.config.configuration import DataConfigrationManager
+from timeseries.config.configuration import ConfigrationManager
 from timeseries.components.prepare_data import PrepareDataset
 from timeseries import logger
 
@@ -15,7 +15,7 @@ class DataPreprocessingPipeline:
     
     
     def main(self):
-        config=DataConfigrationManager()
+        config=ConfigrationManager()
         Prepare_data=config.prepare_data()
         dataset= PrepareDataset(Prepare_data)
         Xt,Yt,xT,yT = dataset.dataset_prepration()
